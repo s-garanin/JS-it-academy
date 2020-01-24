@@ -14,7 +14,9 @@ function solveEquation(a, b, c) {
     } else if (d > 0) {
         let x1 = ((-b + d ** 0.5) / (2 * a));
         let x2 = ((-b - d ** 0.5) / (2 * a));
-        alert(`x1 = ${x1} , x2 = ${x2}`);
+        alert(`
+        x1 = ${x1} ,
+        x2 = ${x2}`);
         return x1, x2;
     }
 };
