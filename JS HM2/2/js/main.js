@@ -1,22 +1,23 @@
-var a = prompt('Введите a');
-var b = prompt('Введите b');
-var c = prompt('Введите c');
+let a = prompt('Введите a');
+let b = prompt('b');
+let c = prompt('c');
 function solveEquation(a, b, c) {
-    var d = b ** 2 - 4 * a * c;
-    var x;
+    let d = b ** 2 - 4 * a * c;
+    let x;
     if (d < 0) {
         alert('Корней нет');
-        return undefined;
+        return null;
     } else if (d === 0) {
         x = (-b / (2 * a));
         alert(`x равен ${x}`);
         return x;
     } else if (d > 0) {
-        var x1 = ((-b + d ** 0.5) / (2 * a));
-        var x2 = ((-b - d ** 0.5) / (2 * a));
-        alert(`x1 = ${x1} ,x2 = ${x2}`);
+        let x1 = ((-b + d ** 0.5) / (2 * a));
+        let x2 = ((-b - d ** 0.5) / (2 * a));
+        alert(`x1 = ${x1} , x2 = ${x2}`);
         return x1, x2;
     }
 };
 console.log(solveEquation(a, b, c));
+
 
