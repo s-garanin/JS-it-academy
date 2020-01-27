@@ -1,18 +1,18 @@
-function solveEquation() {
-let a;
-do {
-    a = Number(prompt('Введите a'));    
-}
-while (isNaN(a) || !a || a===0);
-let b;
-do {
-    b = Number(prompt('Введите b'));    
-}
-while (isNaN(b) || !b);
-let c;
-do {
-    c = Number(prompt('Введите c'));    
-}
+function solveEquation(a, b, c) {
+// let a;
+// do {
+//     a = Number(prompt('Введите a'));    
+// }
+// while (isNaN(a) || !a || a===0);
+// let b;
+// do {
+//     b = Number(prompt('Введите b'));    
+// }
+// while (isNaN(b) || !b);
+// let c;
+// do {
+//     c = Number(prompt('Введите c'));    
+// }
 while (isNaN(c) || !c);
     let d = b ** 2 - 4 * a * c;
     let x;
@@ -32,6 +32,6 @@ while (isNaN(c) || !c);
         return [x1, x2];
     }
 };
-console.log(solveEquation());
+console.log(solveEquation(3, -4, 1));
 
 
