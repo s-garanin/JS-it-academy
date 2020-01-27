@@ -8,35 +8,22 @@ while(isNaN(age) || !age) {
 }
 let sex = confirm("Ваш пол мужской?");
 let month = prompt("Ввидите номер месяца рождения", "1");
-while(isNaN(month) || month === "" || month === null) {
+while(isNaN(month) || !month) {
     alert("ОШИБКА! Введите цифры!");
     month = prompt("Ввидите номер месяца рождения", "1");
 }
 let children = prompt("Сколько у вас детей", "3")
-while(isNaN(children) || children === "" || children === null ) {
+while(isNaN(children) || !children) {
     alert("ОШИБКА! Введите цифры!");
     children = prompt("Сколько у вас детей", "3")
 }
 let nowyear = 2020;
 let nowmonth = 1;
 let tenager = ((nowyear - age) >= 18) ? "совершеннолетний" : "несовершеннолетний";
-if (children < 1) {
-    child = "У вас нет детей"
-} else {
-    child = `У вас ${children} детей`
-};
+child = children < 1 ? "У вас нет детей" : `У вас ${children} детей`;
 age = nowyear - age;
-if (month > nowmonth) {
-    age = age - 1
-} else {
-    age = age
-};
-if (sex) {
-    sex = "мужской"
-} else {
-    sex = "женский"
-};
-
+age = month > nowmonth ? age-=1 : age;
+sex = sex ? "мужской" : "женский";
 alert(`${lastname} ${name} ${fathername} 
 Вам ${age} год и ${12 - month} месяцев
 Пол ${sex}

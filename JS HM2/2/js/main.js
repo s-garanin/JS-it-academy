@@ -1,7 +1,7 @@
+function solveEquation(a, b, c) {
 let a = prompt('Введите a');
 let b = prompt('b');
 let c = prompt('c');
-function solveEquation(a, b, c) {
     let d = b ** 2 - 4 * a * c;
     let x;
     if (d < 0) {
