@@ -8,7 +8,7 @@ let c = prompt('c');
         alert('Корней нет');
         return null;
     } else if (d === 0) {
-        x = (-b / (2 * a));
+       let x = (-b / (2 * a));
         alert(`x равен ${x}`);
         return x;
     } else if (d > 0) {
