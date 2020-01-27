@@ -13,7 +13,7 @@ function solveEquation(a, b, c) {
 // do {
 //     c = Number(prompt('Введите c'));    
 // }
-while (isNaN(c) || !c);
+// while (isNaN(c) || !c);
     let d = b ** 2 - 4 * a * c;
     let x;
     if (d < 0) {
