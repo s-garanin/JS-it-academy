@@ -18,9 +18,11 @@ while (isNaN(c) || !c);
     let x;
     if (d < 0) {
         alert('Корней нет');
+        return [];
     } else if (d === 0) {
        let x = (-b / (2 * a));
         alert(`x равен ${x}`);
+        return [x1];
     } else if (d > 0) {
         let x1 = ((-b + d ** 0.5) / (2 * a));
         let x2 = ((-b - d ** 0.5) / (2 * a));
