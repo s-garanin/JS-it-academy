@@ -1,5 +1,5 @@
 function max(array) {
-    let d = array[0];
+    let d = 0;
     for(let i = 0; i < array.length; i++) {
         if (d < array[i]) 
             d = array[i];
