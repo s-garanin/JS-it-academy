@@ -16,13 +16,13 @@ console.log(unique([1, 1, 2, 0, 2]))
 ///////////////////////////////////////////////
 
 function unique1(array) {
-    result = [];
+    uniq = [];
     for (let i = 0; i < array.length; i++) {
-        if (!result.includes(array[i])) {
-            result.push(array[i]);
+        if (!uniq.includes(array[i])) {
+            uniq.push(array[i]);
         }
     }
-    return result;
+    return uniq;
 }
 
 console.log(unique1([1, 1, 2, 0, 2]));
