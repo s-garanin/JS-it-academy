@@ -6,9 +6,23 @@ function unique(array) {
         let item = array[i];
          if(reserve[item] !== 1) {
                reserve[item] = 1;
-               out[j++] = item;
+               out[j] = item;
+               j++;
          }
     }
     return out;
 }
 console.log(unique([1, 1, 2, 0, 2]))
+///////////////////////////////////////////////
+
+function unique1(array) {
+    result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (!result.includes(array[i])) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+
+console.log(unique1([1, 1, 2, 0, 2]));
