@@ -1,6 +1,12 @@
 let calculator = (function () {
     let result = 0;
     return {
+        percent(x) {
+            result %= x;
+        },
+        sqrt(x) {
+            result = Math.sqrt(x);
+        },
         clear() {
             result = 0;
         },
@@ -19,28 +25,24 @@ let calculator = (function () {
         pow(x) {
             result **= x;
         },
-        percent(x) {
-            result %= x;
-        },
-        sqrt(x) {
-            result = Math.sqrt(x);
-        },
         print() {
             return result;
         }
     };
 })();
-calculator.add(15);
-calculator.print();
-calculator.pow(10);
+calculator.percent(12);
 calculator.print();
 calculator.sqrt(5);
 calculator.print();
-calculator.percent(12);
+calculator.add(15);
 calculator.print();
-calculator.divide(6);
+calculator.substract(6);
+calculator.print();
+calculator.multiply(6);
 calculator.print();
 calculator.divide(3);
+calculator.print();
+calculator.pow(10);
 calculator.print();
 console.log(calculator.print());
 
