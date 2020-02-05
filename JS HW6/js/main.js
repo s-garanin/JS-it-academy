@@ -1,97 +1,47 @@
-function plus() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 + num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function minus() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 - num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function share() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 / num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function multiply() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 * num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function square() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 ** 2 || num2 ** 2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function radical() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 ** 0.5 || num2 ** 0.5;
-    document.getElementById('out').innerHTML = result;
-}
-
-function percent() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 / 100 * num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function cube() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 ** 3 || num2 ** 3;
-    document.getElementById('out').innerHTML = result;
-}
-
-function stage() {
-    let num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 ** num2;
-    document.getElementById('out').innerHTML = result;
-}
-
-function clearr1() {
-    document.getElementById('n1').value = '';
-    document.getElementById('n2').value = '';
-    document.getElementById('out').innerHTML = '';
-}
+let calculator = (function () {
+    let result = 0;
+    return {
+        clear() {
+            result = 0;
+        },
+        add(x) {
+            result += x;
+        },
+        substract(x) {
+            result -= x;
+        },
+        multiply(x) {
+            result *= x;
+        },
+        divide(x) {
+            result /= x;
+        },
+        pow(x) {
+            result **= x;
+        },
+        percent(x) {
+            result %= x;
+        },
+        sqrt(x) {
+            result = Math.sqrt(x);
+        },
+        print() {
+            return result;
+        }
+    };
+})();
+calculator.add(15);
+calculator.print();
+calculator.pow(10);
+calculator.print();
+calculator.sqrt(5);
+calculator.print();
+calculator.percent(12);
+calculator.print();
+calculator.divide(6);
+calculator.print();
+calculator.divide(3);
+calculator.print();
+console.log(calculator.print());
 
 
