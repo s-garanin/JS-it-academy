@@ -8,9 +8,7 @@ function info(phone, email) {
 function bind(fn, context, ...rest) {
     return fn.bind(context, ...rest)
 }
- bind(info, person)('375296433353', 'sgaranin@inbox.ru')
- bind(info, person,'375296433353')('sgaranin@inbox.ru')
- bind(info, person, '375296433353', 'sgaranin@inbox.ru')()
+ bind(info, person)('375296433353', 'sgaranin@inbox.ru');
 
 
 
