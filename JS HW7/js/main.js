@@ -2,7 +2,7 @@ const person = {
     name: 'Stanislav'
 }
 function info(phone, email) {
-    console.log(`Имя: ${this.name}, Tel.:${phone}, Email: ${email}`)
+    console.log(`Имя: ${this.name}, Tel: ${phone}, Email: ${email}`)
 }
 
 function bind(fn, context, ...rest) {
