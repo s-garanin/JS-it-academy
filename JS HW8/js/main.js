@@ -30,4 +30,4 @@ drinkStorage.addValue('orange juice', 'non-alc');
 drinkStorage.addValue('wine', 'alc');
 drinkStorage.addValue('mineral water', 'non-alc');
 drinkStorage.addValue('coke', 'non-alc');
-console.log( drinkStorage.getValue('coke') );
+console.log( drinkStorage.getValue('wine') );
