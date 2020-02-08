@@ -1,18 +1,18 @@
-deepEqual = function (a, b) {
-    for (let p in a) {
-        if (p) {
-            if (a[p] !== b[p]) {
-                return false;
-            }
-        }
+function deepEqual(a, b) {
+    if (a === b) {
+        return true;
     }
-    for (let p in b) {
-        if (p) {
-            if (a[p] !== b[p]) {
-                return false;
-            }
+    if (Object.keys(a).length !== Object.keys(b).length) {
+        return false;
+    }
+    if (!(a instanceof Object || b instanceof Object)) {
+        return false;
+    }
+    for (let key in a) {
+        if (!deepEqual(a[key], b[key])) {
+            return false;
         }
     }
     return true;
-};
-console.log(deepEqual({a: 9, b: 7}, {a: 9, b: 7}));
+}
+console.log(deepEqual({a: 9, b: [1, 2]}, {a: 9, b: [1, 2]}));
