@@ -18,9 +18,15 @@ function HashStorage() {
 }
 let drinkStorage = new HashStorage();
 
-drinkStorage.addValue('soda', 'non-alc');
-drinkStorage.addValue('juice', 'non-alc');
-drinkStorage.addValue('beer', 'alc');
-drinkStorage.addValue('mineral water', 'non-alc');
-drinkStorage.addValue('wine', 'alc');
-console.log(drinkStorage.getValue('wine'));
+
+
+function foo () {
+    HashStorage.call(this);
+    let a = this.addValue;
+    this.addValue = function(key, value) {
+        a.call(this, key, value);
+    }
+}
+let bar = new foo();
+
+

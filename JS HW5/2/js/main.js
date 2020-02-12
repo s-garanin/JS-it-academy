@@ -8,8 +8,8 @@ function deepEqual(a, b) {
     if (!(a instanceof Object || b instanceof Object)) {
         return false;
     }
-    for (let key in a) {
-        if (!deepEqual(a[key], b[key])) {
+    for (let i in a) {
+        if (!deepEqual(a[i], b[i])) {
             return false;
         }
     }
