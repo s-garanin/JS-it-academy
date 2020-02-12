@@ -22,7 +22,7 @@ let drinkStorage = new HashStorage();
 
 function foo() {
     HashStorage.call(this);
-    let a = this.addValue;
+    let parrentHash = this.addValue;
     this.addValue = function (key, value) {
         a.call(this, key, value);
         this.getStas();
