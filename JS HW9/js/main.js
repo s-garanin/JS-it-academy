@@ -35,3 +35,13 @@ function foo() {
 let bar = new foo();
 
 
+function sos() {
+    HashStorage.call(this);
+    this.getVasya = function() {
+        console.log('Vasya');
+        
+    }
+
+}
+
+
