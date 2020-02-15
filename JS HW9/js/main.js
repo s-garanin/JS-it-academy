@@ -20,11 +20,11 @@ let drinkStorage = new HashStorage();
 
 
 
-function foo() {
+function Foo() {
     HashStorage.call(this);
     let parrentHash = this.addValue;
     this.addValue = function (key, value) {
-        a.call(this, key, value);
+        parrentHash.call(this, key, value);
         this.getStas();
     }
     this.getStas = function() {
@@ -35,7 +35,7 @@ function foo() {
 let bar = new foo();
 
 
-function sos() {
+function Sos() {
     HashStorage.call(this);
     this.getVasya = function() {
         console.log('Vasya');
