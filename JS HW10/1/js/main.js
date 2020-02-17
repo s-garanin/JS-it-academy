@@ -37,7 +37,7 @@ Foo.prototype.getStas = function () {
 
 
 Sos.prototype = Object.create(HashStorage.prototype);
-Sos.prototype.constructor = Foo;
+Sos.prototype.constructor = Sos;
 
 
 
